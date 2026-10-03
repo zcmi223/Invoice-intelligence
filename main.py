@@ -41,6 +41,19 @@ def main():
     paths = sorted(glob.glob(os.path.join(args.input, "*.png")) +
                    glob.glob(os.path.join(args.input, "*.jpg")) +
                    glob.glob(os.path.join(args.input, "*.jpeg")))
+    if not paths and not config.LIVE_MODE:
+        # Demo mode with no images (e.g. a fresh clone -- PNGs are generated,
+        # not committed): create the synthetic samples automatically.
+        default_in = os.path.abspath("images")
+        if os.path.abspath(args.input) == default_in:
+            print("  no sample images found -- generating them ...")
+            import runpy
+            gen = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "scripts", "generate_samples.py")
+            runpy.run_path(gen, run_name="__main__")
+            paths = sorted(glob.glob(os.path.join(args.input, "*.png")) +
+                           glob.glob(os.path.join(args.input, "*.jpg")) +
+                           glob.glob(os.path.join(args.input, "*.jpeg")))
     if not paths:
         sys.exit(f"No invoice images found in {args.input}")
 

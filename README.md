@@ -109,15 +109,19 @@ pipeline runs end-to-end with zero setup.
 ## Quickstart (demo mode — no key needed)
 
 ```bash
-git clone https://github.com/zcmi223/invoice-intelligence.git
-cd invoice-intelligence
+git clone https://github.com/zcmi223/Invoice-intelligence.git
+cd Invoice-intelligence
 pip install -r requirements.txt
 
-# (re)generate the 5 synthetic sample invoices + mock Roboflow outputs
-python scripts/generate_samples.py
-
-# run the full pipeline
+# run the full pipeline (sample invoices generate automatically on first run)
 python main.py --demo --output output/report.md
+```
+
+To regenerate the 5 synthetic sample invoices + mock Roboflow outputs from
+scratch at any time:
+
+```bash
+python scripts/generate_samples.py
 ```
 
 Expected output:
