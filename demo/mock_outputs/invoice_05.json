@@ -1,0 +1,39 @@
+{
+  "workflow": "invoice-extraction",
+  "image": "invoice_05.png",
+  "outputs": {
+    "ocr_text": "Vertex Data Centers\n9000 Data Pkwy, Ashburn, VA 20147\nINVOICE\nInvoice #: INV-2026-1033\nDate: 2026-10-02\nBill to: Zachary Middleton\nDescription Qty Amount\nColocation - Q4 1 8400.00\nSubtotal: 8400.00\nTax (6%): 504.00\nTOTAL DUE: 8904.00",
+    "regions": [
+      {
+        "label": "vendor_block",
+        "text": "Vertex Data Centers 9000 Data Pkwy, Ashburn, VA 20147",
+        "bbox": [
+          60,
+          50,
+          500,
+          120
+        ]
+      },
+      {
+        "label": "invoice_number",
+        "text": "INV-2026-1033",
+        "bbox": [
+          60,
+          250,
+          260,
+          40
+        ]
+      },
+      {
+        "label": "total_due",
+        "text": "8904.00",
+        "bbox": [
+          560,
+          760,
+          200,
+          40
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "workflow": "invoice-extraction",
+  "image": "invoice_03.png",
+  "outputs": {
+    "ocr_text": "Acme Cloud Services\n500 Market St, San Francisco, CA 94105\nINVOICE\nInvoice #: INV-2026-0841\nDate: 2026-09-28\nBill to: Zachary Middleton\nDescription Qty Amount\nCompute instances 1 520.00\nSubtotal: 520.00\nTax (6%): 31.20\nTOTAL DUE: 551.20",
+    "regions": [
+      {
+        "label": "vendor_block",
+        "text": "Acme Cloud Services 500 Market St, San Francisco, CA 94105",
+        "bbox": [
+          60,
+          50,
+          500,
+          120
+        ]
+      },
+      {
+        "label": "invoice_number",
+        "text": "INV-2026-0841",
+        "bbox": [
+          60,
+          250,
+          260,
+          40
+        ]
+      },
+      {
+        "label": "total_due",
+        "text": "551.20",
+        "bbox": [
+          560,
+          760,
+          200,
+          40
+        ]
+      }
+    ]
+  }
+}

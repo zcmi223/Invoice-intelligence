@@ -1,0 +1,39 @@
+{
+  "workflow": "invoice-extraction",
+  "image": "invoice_04.png",
+  "outputs": {
+    "ocr_text": "Northwind Logistics\n77 Harbor Rd, Evansville, IN 47708\nINVOICE\nInvoice #: INV-2026-1022\nDate: 2026-10-01\nBill to: Zachary Middleton\nDescription Qty Amount\nFreight - September 1 1250.00\nFuel surcharge 1 187.50\nSubtotal: 1437.50\nTax (6%): 86.25\nTOTAL DUE: 1450.00",
+    "regions": [
+      {
+        "label": "vendor_block",
+        "text": "Northwind Logistics 77 Harbor Rd, Evansville, IN 47708",
+        "bbox": [
+          60,
+          50,
+          500,
+          120
+        ]
+      },
+      {
+        "label": "invoice_number",
+        "text": "INV-2026-1022",
+        "bbox": [
+          60,
+          250,
+          260,
+          40
+        ]
+      },
+      {
+        "label": "total_due",
+        "text": "1450.00",
+        "bbox": [
+          560,
+          760,
+          200,
+          40
+        ]
+      }
+    ]
+  }
+}

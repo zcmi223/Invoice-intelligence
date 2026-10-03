@@ -1,0 +1,39 @@
+{
+  "workflow": "invoice-extraction",
+  "image": "invoice_02.png",
+  "outputs": {
+    "ocr_text": "Bright Office Supply\n12 Commerce Ave, Louisville, KY 40202\nINVOICE\nInvoice #: INV-2026-0917\nDate: 2026-09-21\nBill to: Zachary Middleton\nDescription Qty Amount\nCopy paper (10 reams) 10 89.99\nToner cartridges 2 129.50\nSubtotal: 219.49\nTax (6%): 13.17\nTOTAL DUE: 232.66",
+    "regions": [
+      {
+        "label": "vendor_block",
+        "text": "Bright Office Supply 12 Commerce Ave, Louisville, KY 40202",
+        "bbox": [
+          60,
+          50,
+          500,
+          120
+        ]
+      },
+      {
+        "label": "invoice_number",
+        "text": "INV-2026-0917",
+        "bbox": [
+          60,
+          250,
+          260,
+          40
+        ]
+      },
+      {
+        "label": "total_due",
+        "text": "232.66",
+        "bbox": [
+          560,
+          760,
+          200,
+          40
+        ]
+      }
+    ]
+  }
+}

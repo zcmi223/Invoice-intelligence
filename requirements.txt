@@ -1,0 +1,4 @@
+# Live Roboflow path (demo mode needs only pillow + python-dotenv)
+inference-sdk>=0.9
+pillow>=10.0
+python-dotenv>=1.0
